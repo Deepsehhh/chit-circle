@@ -1,0 +1,9 @@
+{
+  "network": "localnet",
+  "appId": "1134",
+  "appAddress": "FSGLGOILEWU5D66ABCX2WZFOQKBXTBT3GZGENJ65GWV2PGBE7XBEKQHFX4",
+  "createTxId": "ZS4UUWGW6DWIC7RHP5FAPFA4HLNROKGPAJEUT3TA3NN6ATPWNZPA",
+  "contribution": 100000,
+  "maxMembers": 3,
+  "roundSeconds": 86400
+}

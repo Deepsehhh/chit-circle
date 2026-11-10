@@ -1,0 +1,9 @@
+{
+  "network": "testnet",
+  "appId": "775695522",
+  "appAddress": "45MQQERV5KX2RJALONFPSSRQDFWAC7LL7ZXOVDNIKT22X5DFDSQTCYPB2I",
+  "createTxId": "5EXLBAPVUOWD5UCQBY34VUYGI3GTTEMQ46XEFLWMZM2I25F5TMDA",
+  "contribution": 100000,
+  "maxMembers": 3,
+  "roundSeconds": 86400
+}

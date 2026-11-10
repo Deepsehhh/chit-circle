@@ -1,0 +1,72 @@
+{
+  "name": "ChitCircle",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "desc": "Creates a new savings circle.",
+      "args": [
+        {
+          "name": "contributionAmount",
+          "type": "uint64",
+          "desc": "microAlgos each member pays every round"
+        },
+        {
+          "name": "maxMembersAllowed",
+          "type": "uint64",
+          "desc": "number of members (2 to 5)"
+        },
+        {
+          "name": "roundLengthSeconds",
+          "type": "uint64",
+          "desc": "how long each round lasts, in seconds"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "join",
+      "desc": "Join the circle. Must be grouped with a payment of exactly 0.2 ALGO\n(200000 microAlgos) to the app, which pays for the member's storage boxes.\nWhen the last seat is filled, round 1 starts.",
+      "args": [
+        {
+          "name": "payment",
+          "type": "pay"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "contribute",
+      "desc": "Pay this round's contribution. Must be grouped with a payment of exactly\nthe contribution amount to the app. One payment per member per round.",
+      "args": [
+        {
+          "name": "payment",
+          "type": "pay"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "payout",
+      "desc": "Once everyone has paid, anyone can call this to send the pot to this\nround's recipient and move to the next round (or finish the circle).\nThe caller must add extra fee to cover the inner payment.",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "refundRound",
+      "desc": "If the round deadline has passed and not everyone paid, anyone can call\nthis. Members who paid get their contribution back and the circle is\ncancelled. The caller must add extra fee (one inner payment per refund).",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
